@@ -1,18 +1,18 @@
 window.addEventListener("load", init);
-var allapot = false;
-var leptet = 0;
+let allapot = false;
+let leptet = 0;
 function init() {
     console.log("auto");
-    var auto = ' <div class="auto"><img src="kepek/auto3.png" /></div>';
+    let auto = ' <div class="auto"><img src="kepek/auto3.png" /></div>';
 
     document.querySelector(".forgalom").innerHTML += auto;
-    var autoElem = document.querySelectorAll(".auto")[0];
+    let autoElem = document.querySelectorAll(".auto")[0];
     //
-    var lampa = document.querySelector(".lampa");
-    var lampaSzin = document.querySelectorAll(".lampa div");
-    var piros = document.querySelector(".piros");
-    var sarga = document.querySelector(".sarga");
-    var zold = document.querySelector(".zold");
+    let lampa = document.querySelector(".lampa");
+    let lampaSzin = document.querySelectorAll(".lampa div");
+    let piros = document.querySelector(".piros");
+    let sarga = document.querySelector(".sarga");
+    let zold = document.querySelector(".zold");
     sarga.style.opacity = "20%";
     zold.style.opacity = "20%";
 
@@ -23,7 +23,7 @@ function init() {
     }, 1000);
 
     setInterval(() => {
-        var szel = parseInt(
+        let szel = parseInt(
             window.getComputedStyle(document.querySelector(".forgalom")).width
         );
         if (allapot) {
@@ -35,7 +35,7 @@ function init() {
             sarga.style.opacity = "20%";
             zold.style.opacity = "100%";
             autoElem.classList.add("balroljobbra");
-            var poz = parseInt(window.getComputedStyle(autoElem).left);
+            let poz = parseInt(window.getComputedStyle(autoElem).left);
             console.log(piros);
             if (poz > szel - 10) {
                 document.location.reload();
